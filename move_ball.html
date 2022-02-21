@@ -1,0 +1,71 @@
+<meta charset="UTF-8">
+
+<canvas></canvas>
+<br>
+<big>Você pode mover a bola se usar as setas do teclado</big>
+
+<script>
+	
+	var canvas = document.querySelector("canvas");
+	var context = canvas.getContext("2d");
+
+	canvas.width = 600;
+	canvas.height = 400;
+
+	fps = 60;
+
+	function drawCircle(c, x, y, r){
+		context.fillStyle = c;
+		context.beginPath();
+		context.arc(x,y,r,0,Math.PI * 2);
+		context.fill();
+	}
+
+	function drawBackground(c){
+		context.fillStyle = c;
+		context.fillRect(0,0,canvas.width, canvas.height);
+	}
+	
+	document.onkeydown = function (args){
+		if(args.keyCode == 37){ 
+			leftKeyPressed = 1;
+		}
+		if(args.keyCode == 39){
+			rightKeyPressed = 1;
+		}	
+	}
+	
+	document.onkeyup = function (args){
+		if(args.keyCode == 37){ 
+			leftKeyPressed = 0;
+		}
+		if(args.keyCode == 39){
+			rightKeyPressed = 0;
+		}
+	}
+
+	//Player Variables
+	var playerX = 0;
+	var playerSpeed = 10;
+
+	var leftKeyPressed = 0;
+	var rightKeyPressed = 0;
+
+	var playerRadius = 20;
+	var playerRadiusPulse = 1;
+
+	function runCircle(){
+		var playerDirection = rightKeyPressed - leftKeyPressed;
+		playerX += playerSpeed * playerDirection;
+		drawCircle("red", playerX + canvas.offsetLeft, canvas.height / 2, playerRadius);
+	}
+
+	function update(){
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		drawBackground("lightgrey");
+		runCircle();
+	}	
+
+	setInterval(update, 1000 / fps);
+
+</script>

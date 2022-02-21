@@ -1,0 +1,145 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+<br>
+<big>Cor personalizada:</big>
+<input></input>
+<button id="button1">Adicionar</button>
+<button id="button2">Remover</button>
+<br>
+<big>Por favor, escrever o nome da cor personalizada em inglês</big>
+
+<script>
+	
+	var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    var entrada = document.querySelector('input');
+    var botao1 = document.getElementById('button1');
+    var botao2 = document.getElementById('button2');
+
+    console.log("Desenhando fundo...")
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+    console.log("Fundo desenhado");
+
+    console.log("Definindo as variaveis da paleta...");
+    var paletaPrincipal = ["red", "green", "blue"];
+    var paleta = ["red", "green", "blue"];
+    var paleteSelecionada = "blue";
+    var tamanhoDosQuadradros = 30;
+    console.log("Variaveis definidas");
+
+
+    console.log("Definindo função desenhaQuadrado...");
+    function desenhaQuadrado(x, y, l, a, c) {
+        pincel.fillStyle = c;
+        pincel.fillRect(x, y, l, a);
+        pincel.fill();
+    }
+    
+    console.log("Definindo função desenhaCirculo...");
+    function desenhaCirculo(x, y, raio, cor) {
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * 3.14);
+        pincel.fill();
+    }
+
+    console.log("Definindo função desenhaPaletaDeCores...");
+    function desenhaPaletaDeCores() {
+        desenhaQuadrado(0, 0, 600, tamanhoDosQuadradros, "white");
+        for(var i = 0; i < paleta.length; i++){
+            desenhaQuadrado(tamanhoDosQuadradros * i, 0, tamanhoDosQuadradros, tamanhoDosQuadradros, paleta[i]);
+            console.log("desenhando paleta " + paleta[i]);
+        }
+    }
+    console.log("Funções definidas");
+
+    console.log("Desenhando paleta");
+    desenhaPaletaDeCores();
+    console.log("Paleta desenhada");
+
+    console.log("Definindo variaveis do mouse...")
+    var desenha;
+    var mouseX;
+    var mouseY;
+    console.log("Variaveis definidas");
+
+    console.log("Paint.html iniciado!");
+
+    tela.onmousedown = function (args){
+        if(mouseX < 600 && mouseY < tamanhoDosQuadradros + tamanhoDosQuadradros / 3){
+            console.log("Paleta Selecionada");
+            for(var i = 0; i < paleta.length; i++){
+                if(mouseX > tamanhoDosQuadradros * i && mouseX < tamanhoDosQuadradros * (i + 1) && mouseY < tamanhoDosQuadradros) {
+                    paleteSelecionada = paleta[i];
+                    console.log("Paleta selecionada é " + paleteSelecionada + ", e paleta do for é " + paleta[i]);
+                    console.log(mouseX);
+                }
+            }
+        }else{
+            desenha = true;
+        }
+    }
+    tela.onmouseup = function (args){
+        desenha = false;
+    }
+    tela.onmousemove = function (args){
+        mouseX = args.pageX - tela.offsetLeft;
+        mouseY = args.pageY - tela.offsetTop;
+    }
+
+    function ativar(){
+        if(desenha){
+            if(mouseX < 600 && mouseY < tamanhoDosQuadradros + tamanhoDosQuadradros / 2){
+                console.log("Desenho desativado");
+            }else{
+                console.log("Desenha ativado");
+                desenhaCirculo(mouseX, mouseY, 10, paleteSelecionada);
+            }
+        }
+    }
+
+    setInterval(ativar, 0);
+
+    var coresAdicionadas = [];
+
+    botao1.onclick = function(){
+        if(entrada.value != ""){
+
+            for(var i = 0; i < coresAdicionadas.length; i++){
+                if(entrada.value == coresAdicionadas[i]){
+                    alert("Essa cor já está na paleta");
+                    return;
+                }
+            }
+
+            if(paleta.length >= 20){
+                alert("Você atingiu o limite de cores na paleta!");
+                return;
+            }
+
+            paleta.push(entrada.value);
+            coresAdicionadas.push(entrada.value);
+
+            desenhaPaletaDeCores();
+            entrada.value = "";
+            entrada.focus();
+
+        }else{
+            alert("Você não inseriu nenhum valor!");
+        }
+
+        
+    }
+
+    botao2.onclick = function(){
+
+        paleta = [];
+        paleta = paletaPrincipal;
+        
+        desenhaPaletaDeCores();
+    }
+
+</script>

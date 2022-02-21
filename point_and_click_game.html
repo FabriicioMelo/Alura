@@ -1,0 +1,55 @@
+<meta charset="UTF-8">
+
+<canvas></canvas>
+
+<script>
+
+	var canvas = document.querySelector("canvas");
+	var context = canvas.getContext("2d");
+
+	canvas.width = 1280;
+	canvas.height = 720;
+
+	function drawCircle(x, y, r, c){
+		context.fillStyle = c;
+		context.beginPath();
+		context.arc(x + r, y + r, r, 0, Math.PI * 2);
+		context.fill();
+	}
+	
+	var targetRadius = 30
+	var X = 0;
+	var Y = 0;
+	var R = 0;
+	var canClick = false;	
+
+	function target(){
+		var targetR = targetRadius * ((canvas.width + canvas.height) / 2 / 500)
+		var targetX = Math.round(Math.random() * (canvas.width - (targetR * 2))); // r * 2
+		var targetY = Math.round(Math.random() * (canvas.height - (targetR * 2))); // r * 2
+		drawCircle(targetX, targetY, targetR, "red");
+		drawCircle(targetX + targetR / 3, targetY + targetR / 3, targetR / 3 + targetR / 3 , "lightgray");
+		drawCircle(targetX + targetR / 2 + targetR / 6, targetY + targetR / 2 + targetR / 6, targetR / 3, "red");
+		X = targetX;
+		Y = targetY;
+		R = targetR;
+	}
+	
+	canvas.onclick = function(args){
+		var x = args.pageX - canvas.offsetLeft;
+		var y = args.pageY - canvas.offsetTop;
+		if(x < X + R * 2 && y < Y + R * 2 && x > X && y > Y){
+			console.log("U got it");
+		}
+	}
+
+	function update(){
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		target();
+	}
+	
+	update();
+	setInterval(update, 220);
+	
+
+</script>

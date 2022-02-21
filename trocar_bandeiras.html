@@ -1,0 +1,80 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+	
+	//Canvas Variables
+	var canvas = document.querySelector("canvas");
+	var context = canvas.getContext("2d");
+	
+	var tela = 600;
+
+	var width = tela;
+	var height = tela / 1.77;
+	
+	canvas.width = width;
+	canvas.height = height;
+
+	//Draw Functions
+
+	function drawRect(x, y, w, h, c){
+		context.fillStyle = c;
+		context.fillRect(x, y, w, h);
+	}
+	
+	function drawCircle(x, y, r, c){
+		context.fillStyle = c;
+		context.beginPath();
+		context.arc(x, y, 100 * ((width + height) / 2 / 500), 0, Math.PI * 2);
+		context.fill();
+	}
+
+	function drawTriangle(x, y, w, h, c){
+		context.fillStyle = c;
+		context.beginPath();
+		context.moveTo(x + w / 2, y);
+		context.lineTo(x, h);
+		context.lineTo(x + w, h);
+		context.fill();
+	}
+
+	function drawBrazilianFlag() {
+		drawRect(0, 0, width, height, "green");
+		drawTriangle(width / 12, height / 4 / 2, width - width / 6, height / 2 + 0.6, "yellow")
+    		drawTriangle(width / 12, height - height / 4 / 2, width - width / 6, height / 2, "yellow");
+		drawCircle(width / 2, height / 2 , 100, "darkblue");
+	}
+
+	function drawGermanyFlag() {
+		drawRect(0, 0, width, height / 3, "black");		
+		drawRect(0, height / 3, width, height / 3, "red");
+		drawRect(0, height / 3 + height / 3, width, height / 3, "yellow");
+	}
+	
+	//Flag Variables	
+	var flag = 0;
+	var flags = [drawBrazilianFlag, drawGermanyFlag];
+
+	flags[0]();
+	flag++;
+
+	//Change Flag Function
+	function changeFlag(){
+		for(var i = 0; i < flags.length; i++){
+			if(flag == i){
+				flags[i]();
+			}
+		}
+		
+		if(flag < flags.length - 1){
+			flag++;
+		}else{
+			flag = 0;
+		}
+	}
+
+	//Loop
+	setInterval(changeFlag, 3000);
+
+</script>
