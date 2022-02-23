@@ -1,0 +1,19 @@
+body {
+	background: rgb(200,200,200)
+}
+
+h1 {
+	text-align:center
+}
+
+p {
+	text-align:center
+}
+
+#missao {
+	font-size:20px
+}
+
+em strong {
+	color: rgb(255,0,0)
+}
