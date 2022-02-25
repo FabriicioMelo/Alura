@@ -1,0 +1,19 @@
+body {
+	background: url(./imagens/bg.jpg);
+}
+
+footer {
+	text-align: center;
+	background: url(./imagens/bg.jpg);
+	padding: 30px 0;
+}
+
+.logo-bottom {
+	height: 100px;
+}
+
+.p-copyright {
+	font-size: 13;
+	color: #FFFFFF;
+	padding: 20px 0 0;
+}

@@ -1,41 +1,5 @@
-header {
-	background: #BBBBBB;
-	padding: 20px 0;
-}
-
-#caixa {
-	position: relative;
-	width: 940px;
-	height: 80px;
-	margin: 0 auto;
-}
-
-.logo {
-	width: 60px;
-}
-
-nav {
-	position: absolute;
-	top: 30px;
-	right: 0;
-}
-
-nav li {
-	display: inline;
-	margin: 0 0 0 20px;
-}
-
-nav a {
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #000000;
-	font-weight: bold;
-	font-size: 24px;
-}
-
-nav a:hover {
-	color: #C78C19;
-	text-decoration: underline;
+main {
+	background: white;
 }
 
 #produtos {
@@ -82,20 +46,4 @@ nav a:hover {
 	font-size: 22px;
 	font-weight: bold;
 	padding: 10px 0 0;
-}
-
-footer {
-	text-align: center;
-	background: url(./imagens/bg.jpg);
-	padding: 30px 0;
-}
-
-.logo-bottom {
-	height: 100px;
-}
-
-.p-copyright {
-	font-size: 13;
-	color: #FFFFFF;
-	padding: 20px 0 0;
 }
