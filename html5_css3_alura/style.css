@@ -1,0 +1,44 @@
+.divisao-introducao {
+	background: #CCCCCC;
+	padding: 30px	
+}
+
+#banner-imagem {
+	width:100%
+}
+
+.titulo-centralizado {
+	text-align:center
+}
+
+p {
+	text-align:center
+}
+
+#missao {
+	font-size:20px
+}
+
+em strong {
+	color: rgb(255,0,0)
+}
+
+.beneficios {
+	background: #FFFFFF;
+	padding: 20px
+}
+
+ul {
+	display: inline-block;
+	vertical-align: top;
+	width: 20%;
+	margin-right: 15%
+}
+
+.itens {
+	font-style: italic
+}
+
+#beneficios-imagem {
+	width: 50%
+}
