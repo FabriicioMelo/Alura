@@ -7,7 +7,7 @@ header {
 	position: relative;
 	width: 940px;
 	height: 80px;
-	
+	margin: 0 auto;
 }
 
 .logo {
@@ -21,7 +21,7 @@ nav {
 }
 
 nav li {
-	display: inline-block;
+	display: inline;
 	margin: 0 0 0 20px;
 }
 
