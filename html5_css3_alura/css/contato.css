@@ -1,0 +1,72 @@
+main {
+    background: white;
+}
+
+form{
+    width: 940px;
+    padding: 50px 0 50px;
+    margin: 0 auto;
+}
+
+.div-contact-basicinfo label, .div-contact-basicinfo p, .fieldset-contact-preference label, .fieldset-contact-time legend {
+    display:block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.div-contact-basicinfo input{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.fieldset-contact-preference p, .fieldset-contact-preference legend, .div-contact-emailnews label, .div-contact-emailnews p{
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.fieldset-contact-time select {
+    display: block;
+    margin: 0 0 10px;
+}
+
+.div-contact-submit input {
+    width: 40%;
+    padding: 15px 0;
+    background-color: orange;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.div-contact-submit input:hover {
+    background-color: rgb(211, 116, 0);
+    transform: scale(1.2);
+}
+
+.div-contact-tabletime {
+    width: 940px;
+    padding: 0 0 50px;
+    margin: 0 auto;
+}
+
+table {
+    margin: 20px 0;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 8px 15px;
+}

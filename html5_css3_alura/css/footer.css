@@ -1,10 +1,10 @@
 body {
-	background: url(./imagens/bg.jpg);
+	background: url(../imagens/bg.jpg);
 }
 
 footer {
 	text-align: center;
-	background: url(./imagens/bg.jpg);
+	background: url(../imagens/bg.jpg);
 	padding: 30px 0;
 }
 
