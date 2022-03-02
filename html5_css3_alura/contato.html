@@ -1,96 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
     <head>
         <meta charset="UTF-8">
-        <title>Contato - Barbearia Alura</title>
-        <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/header.css">
-        <link rel="stylesheet" href="./css/footer.css">
-        <link rel="stylesheet" href="./css/contato.css">
+        <meta name="viewport" content="width=device-width">
+        <title>Contact - Barber Alura</title>
+
+        <link rel="stylesheet" href="./reset.css">
+        <link rel="stylesheet" href="./style.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     </head>
+
     <body>
         <header>
-            <div id="caixa">
+            <div class="box-header">
                 <img class="logo" src="./imagens/logo.png" alt="Logo da Barbearia Alura">
                 <nav>
                     <ul>
-                        <li><a href="./index.html">Início</a></li>
-                        <li><a href="./produtos.html">Produtos</a></li>
-                        <li><a href="./contato.html">Contato</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./produtos.html">Products</a></li>
+                        <li><a href="./contato.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </header>
 
         <main>
-            <form>
-                <div class="div-contact-basicinfo">
-                    <label for="inputtext-contact-nameandlastname"><p>Nome e sobrenome</p><input type="text" id="inputtext-contact-nameandlastname" required placeholder="Nome Sobrenome"></label>
+            <form class="contact-form">
+                <div class="box-contact-information">
+                    <label for="inputtext-contact-nameandlastname"><p>Name and Lastname</p><input type="text" id="inputtext-contact-nameandlastname" required placeholder="Nome Sobrenome"></label>
                 
-                    <label for="inputemail-contact-email"><p>Email</p><input type="email" id="inputemail-contact-email" required placeholder="seuemail@dominio.com"></label>
+                    <label for="inputemail-contact-email"><p>Email</p><input type="email" id="inputemail-contact-email" required placeholder="youremail@domain.com"></label>
                 
-                    <label for="inputtel-contact-numberphone"><p>Número do telefone</p><input type="tel" id="inputtel-contact-numberphone" required placeholder="(XX) XXXXX-XXXX"></label>
+                    <label for="inputtel-contact-numberphone"><p>Phone number</p><input type="tel" id="inputtel-contact-numberphone" required placeholder="(XX) XXXXX-XXXX"></label>
                 
-                    <label for="textarea-contact-message"><p>Mensagem</p><textarea cols="69" rows="10" id="textarea-contact-message" required placeholder="Sua mensagem aqui..."></textarea></label>
+                    <label for="textarea-contact-message"><p>Message</p><textarea cols="45" rows="10" id="textarea-contact-message" required placeholder="Your message here..."></textarea></label>
                 </div>
                 
-                <fieldset class="fieldset-contact-preference">
-                    <legend>Como prefere o nosso contato?</legend>
+                <fieldset class="field-contact-preference">
+                    <legend>How do you prefer contact?</legend>
                     <label for="inputradio-contact-email">
                         <input type="radio" name="contact-preference" value="email" id="inputradio-contact-email">
                         <p>Email</p>
                     </label>
                     <label for="inputradio-contact-phonenumber">
                         <input type="radio" name="contact-preference" value="phonenumber" id="inputradio-contact-phonenumber">
-                        <p>Telefone</p>
+                        <p>Call</p>
                     </label>
                     <label for="inputradio-contact-whatsapp">
                         <input type="radio" name="contact-preference" value="whatsapp" id="inputradio-contact-whatsapp" checked>
-                        <p>Whatsapp</p>
+                        <p>Telegram</p>
                     </label>
                 </fieldset>
 
-                <fieldset class="fieldset-contact-time">
-                    <legend>Qual horário prefere ser atendido?</legend>
+                <fieldset class="field-contact-time">
+                    <legend>What time do you prefer to be served?</legend>
                     <select>
-                        <option>Manhã</option>
-                        <option>Tarde</option>
-                        <option>Noite</option>
+                        <option>Forenoon</option>
+                        <option>Afternoon</option>
+                        <option>Evening</option>
                     </select>
                 </fieldset>
 
-                <div class="div-contact-emailnews">
+                <div class="box-contact-emailnews">
                     <label for="inputcheckbox-contact-emailnews">
                         <input type="checkbox" id="inputcheckbox-contact-emailnews" checked>
-                        <p>Gostaria de receber nossas novidades por email?</p>
+                        <p>Would you like to receive our news by email?</p>
                     </label>
                 </div>
                 
-                <div class="div-contact-submit">
-                    <input type="submit" value="Enviar formulário" id="input-contact-submit">
+                <div class="box-contact-submit">
+                    <input type="submit" value="Send" id="input-contact-submit">
                 </div>
             </form>
 
-            <div class="div-contact-tabletime">
+            <div class="box-contact-schedule">
                 <table>
                     <thead>
                         <tr>
-                            <th>Dia</th>
-                            <th>Horário</th>
+                            <th>Day</th>
+                            <th>Timetable</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Segunda</td>
+                            <td>Monday</td>
                             <td>8h ~ 20h</td>
                         </tr>
                         <tr>
-                            <td>Quarta</td>
+                            <td>Wednesday</td>
                             <td>8h ~ 20h</td>
                         </tr>
                         <tr>
-                            <td>Sexta</td>
+                            <td>Friday</td>
                             <td>8h ~ 20h</td>
                         </tr>
                     </tbody>
@@ -99,7 +101,7 @@
         </main>
         <footer>
             <img class="logo-bottom" src="./imagens/logo-branco.png" alt="Logo da Barbearia Alura">
-            <p class="p-copyright">&copy; Copyright Barbearia Alura - 2022</p>
+            <p class="copyright">&copy; Copyright Alura Barbershop - 2022</p>
         </footer>
     </body>
 </html>

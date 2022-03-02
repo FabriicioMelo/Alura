@@ -1,0 +1,334 @@
+/* -----------------------------
+    Pages Body CSS
+    ----------------------------*/
+body {
+	font-family: 'Montserrat', sans-serif;
+    background: url(./imagens/bg.jpg);
+}
+main {
+	background-color: white;
+}
+
+main p {
+	font-size: 20px;
+}
+
+/* -----------------------------
+    Pages Header CSS
+    ----------------------------*/
+header {
+	background: #BBBBBB;
+	padding: 20px 0;
+}
+
+.box-header {
+	position: relative;
+	width: 940px;
+	height: 60px;
+	margin: 0 auto;
+}
+
+.box-header .logo {
+    width: 45px;
+}
+
+.box-header nav {
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
+
+.box-header nav li {
+	display: inline;
+	margin: 0 0 0 20px;
+}
+
+.box-header nav a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+	font-size: 24px;
+    transition: 500ms;
+}
+
+.box-header nav a:hover {
+	color: #C78C19;
+	text-decoration: underline;
+}
+
+/* -----------------------------
+    Pages CSS
+    ----------------------------*/
+.headers{
+	font-weight: bold;
+	font-size: 40px;
+	padding: 0 0 20px;
+}
+
+.box-about {
+	padding: 200px 0;
+	background: url(./imagens/beneficios.jpg);
+    text-align: center;
+}
+
+.content-about {
+	width: 700px;
+	margin: 0 auto;
+}
+
+.content-about h2 {
+    color: white;
+}
+
+.content-about p {
+	color: #f3f3f3;
+	margin: 0 0 1em;
+}
+
+.box-benefits {
+	background: linear-gradient(135deg,white 30%, rgb(17, 17, 17));
+	box-shadow: inset 0 0 100px 20px black;
+    text-align: center;
+}
+
+.map-benefits{
+	padding: 50px 0;
+}
+
+.map-benefits p {
+	padding: 0 0 1em;
+}
+
+.box-list-benefits {
+	padding: 0 0 50px;
+}
+
+.content-benefits {
+	margin: 0 auto;
+	width: 300px;
+}
+
+.content-benefits li {
+	line-height: 1.5em;
+	text-align: left;
+}
+
+.items ::before {
+	content: "★";
+	
+}
+
+.box-video {
+	padding: 0 0 3em;
+	margin: 0 auto;	
+}
+
+.box-video .video {
+	width: 500px;
+	height: 300px;
+}
+
+.list-products {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+    
+.list-products  li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 3px solid #000000;
+    border-radius: 45px;
+}
+    
+.list-products li:hover {
+    border-color: #C78C19;
+}
+    
+.list-products li:hover h2 {
+    font-size: 35px;
+}
+    
+.list-products li:active {
+    border-color: #2bff00
+}
+    
+.list-products h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+    
+.product-description {
+    font-size: 18px;
+        
+}
+
+.product-price {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 0 0;
+}
+
+.contact-form{
+    width: 940px;
+    padding: 50px 0 50px;
+    margin: 0 auto;
+}
+
+.box-contact-information label, .box-contact-information p, .field-contact-preference label, .field-contact-time legend {
+    display:block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.box-contact-information input{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.field-contact-preference p, .field-contact-preference legend, .box-contact-emailnews label, .box-contact-emailnews p{
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.field-contact-time select {
+    display: block;
+    margin: 0 0 35px;
+    font-size: 20px;
+    height: 50px;
+    width: 200px;
+}
+
+.box-contact-emailnews {
+    margin: 0 0 1em;
+}
+
+.box-contact-emailnews p {
+    display: inline;
+}
+
+.box-contact-submit input {
+    width: 40%;
+    padding: 15px 0;
+    background-color: orange;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.box-contact-submit input:hover {
+    background-color: rgb(211, 116, 0);
+    transform: scale(1.2);
+}
+
+.box-contact-schedule {
+    width: 940px;
+    padding: 0 0 50px;
+    margin: 0 auto;
+}
+
+.box-contact-schedule table {
+    margin: 20px 0;
+}
+
+.box-contact-schedule thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+.box-contact-schedule td, .box-contact-schedule th {
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+    
+/* -----------------------------
+    Pages Footer CSS
+    ----------------------------*/
+footer {
+	text-align: center;
+	background: url(./imagens/bg.jpg);
+	padding: 30px 0;
+}
+
+.logo-bottom {
+	height: 100px;
+}
+
+.copyright {
+	font-size: 13;
+	color: #FFFFFF;
+	padding: 20px 0 0;
+}
+
+/*-----------------------
+    Mobile changes
+    -------------------*/
+
+@media screen and (max-width: 480px) {
+    
+    .box-header {
+        text-align: center;
+        height: auto;
+    }
+
+    .box-header nav {
+        position: static;
+    }
+
+    .content-about, .box-header {
+        width: auto;
+    }
+
+    .box-video .video {
+        width: 80%;
+        height: 200px;
+    }
+
+    .list-products {
+        width: auto;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+        
+    .list-products  li{
+        display: inline-block;
+        text-align: center;
+        width: auto;
+        vertical-align: top;
+        margin: 1em 2em;
+        padding: 10px 20px;
+        box-sizing: border-box;
+        border: 3px solid #000000;
+        border-radius: 45px;
+    }
+    
+    .list-products li:hover h2 {
+        font-size: 50px;
+    }
+
+    .contact-form{
+        width: auto;
+        padding: 50px 2em 50px;
+        margin: 0 auto;
+    }
+
+    .box-contact-schedule {
+        width: auto;
+        padding: 0 2em 2em;
+    }
+
+}
