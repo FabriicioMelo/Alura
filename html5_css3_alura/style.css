@@ -331,6 +331,10 @@ footer {
         margin: 0 auto;
     }
 
+    .contact-form textarea{
+        width: 90%;
+    }
+
     .box-contact-schedule {
         width: auto;
         padding: 0 2em 2em;
