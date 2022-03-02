@@ -40,7 +40,7 @@ header {
 
 .box-header nav li {
 	display: inline;
-	margin: 0 0 0 20px;
+	margin: 0 20px;
 }
 
 .box-header nav a {
@@ -287,6 +287,11 @@ footer {
 
     .box-header nav {
         position: static;
+    }
+
+    .box-header nav li {
+        margin: 0 10px;
+        text-decoration: underline;
     }
 
     .content-about, .box-header {
